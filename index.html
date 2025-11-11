@@ -1,273 +1,823 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team P.A.W.S - Smart Pet Bowl Project</title>
-    <meta name="description" content="Revolutionary Smart Pet Bowl with AI vision technology to monitor your pet's hydration. Developed by Team P.A.W.S at SDSU College of Engineering.">
-    
-    <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="shortcut icon" type="image/png" href="assets/logo.png">
-    <link rel="apple-touch-icon" href="assets/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Team P.A.W.S - Smart Pet Bowl Project">
-    <meta property="og:description" content="Revolutionary Smart Pet Bowl with AI vision technology developed by Team P.A.W.S at SDSU College of Engineering.">
-    <meta property="og:image" content="assets/logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Team P.A.W.S">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Team P.A.W.S - Smart Pet Bowl Project">
-    <meta name="twitter:description" content="Revolutionary Smart Pet Bowl with AI vision technology developed by Team P.A.W.S at SDSU College of Engineering.">
-    <meta name="twitter:image" content="assets/logo.png">
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/logo.png" alt="Team P.A.W.S Logo" class="logo-image">
-                <span>Smart Pet Bowl</span>
-            </div>
-            <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="nav-cta">Get Notified</button>
-            </div>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Team P.A.W.S - Smart Pet Bowl System | IoT Pet Hydration Monitoring
+        </title>
+        <meta
+            name="description"
+            content="Complete IoT pet hydration monitoring system with mobile app, ESP32-powered smart bowl, and AI vision technology. Track your pet's water intake in real-time with our intelligent hardware and software solution."
+        />
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-star"></i>
-                    <span>Coming Soon</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="gradient-text">AI-Powered</span> Smart Pet Bowl
-                </h1>
-                <p class="hero-description">
-                    Revolutionary pet hydration monitoring using ESP32, AI vision technology, and advanced sensors. 
-                    Automatically detect, identify, and track your pet's water consumption with precision.
-                </p>
-                <div class="hero-cta">
-                    <button class="btn-primary">
-                        <i class="fas fa-bell"></i>
-                        Get Updates
-                    </button>
-                    <a href="https://github.com/Pet-Analytics-Water-Surveillance" target="_blank" class="btn-secondary">
-                        <i class="fab fa-github"></i>
-                        View Project
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">AI Vision</span>
-                        <span class="stat-label">Pet Recognition</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">ESP32</span>
-                        <span class="stat-label">Powered</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">SDSU</span>
-                        <span class="stat-label">Engineering</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="project-showcase">
-                    <div class="screenshot-container">
-                        <img src="assets/screenshot.jpg" alt="Smart Pet Bowl System Screenshot" class="project-screenshot">
-                        <div class="screenshot-overlay">
-                            <div class="tech-badge">
-                                <i class="fas fa-microchip"></i>
-                                <span>ESP32 Powered</span>
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-brain"></i>
-                                <span>YOLOv8 AI</span>
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-wifi"></i>
-                                <span>IoT Connected</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Favicon and App Icons -->
+        <link rel="icon" type="image/png" href="assets/logo.png" />
+        <link rel="shortcut icon" type="image/png" href="assets/logo.png" />
+        <link rel="apple-touch-icon" href="assets/logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/logo.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/logo.png"
+        />
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Advanced Engineering Features</h2>
-                <p>Cutting-edge technology from Team P.A.W.S at SDSU</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>AI Vision Recognition</h3>
-                    <p>Custom YOLOv8 model running on Grove AI Vision Module automatically identifies which pet is drinking.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>ESP32 Microcontroller</h3>
-                    <p>Powerful ESP32 processes sensor data, manages WiFi communication, and coordinates all system components.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Multi-Sensor System</h3>
-                    <p>Ultrasonic level sensor, motion detection, and water pump integration for comprehensive monitoring.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Real-time Analytics</h3>
-                    <p>Raspberry Pi Zero W hosts local dashboard for immediate data visualization and analysis.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Custom PCB Design</h3>
-                    <p>Professional PCB integrates all components efficiently while maintaining sub-$100 cost target.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Engineering Excellence</h3>
-                    <p>Senior Design project showcasing embedded systems, machine learning, and IoT integration.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Open Graph Meta Tags -->
+        <meta
+            property="og:title"
+            content="Team P.A.W.S - Smart Pet Bowl System"
+        />
+        <meta
+            property="og:description"
+            content="Complete IoT pet hydration monitoring system with mobile app, ESP32-powered smart bowl, and AI vision technology developed by Team P.A.W.S at SDSU College of Engineering."
+        />
+        <meta property="og:image" content="assets/logo.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Team P.A.W.S" />
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Team P.A.W.S</h2>
-                    <p>
-                        Developed by Team P.A.W.S (ECE Team 5) at San Diego State University's College of Engineering 
-                        for the EE/COMPE 491W Senior Design course, sponsored by Dr. Hidenori Yamada.
-                    </p>
-                    <p>
-                        Our interdisciplinary team combines Computer Engineering expertise (Tri Bui, Abdulmohsen Almunayes) 
-                        with Electrical Engineering knowledge (Ehren Abeto, Brandon Lord, Zachary Xavier Encarnacion) 
-                        to create this innovative pet health monitoring solution.
-                    </p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Custom YOLOv8 AI model for pet identification</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>ESP32 and Raspberry Pi Zero W integration</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Professional PCB design under $100</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="team-logo-container">
-                        <img src="assets/logo.png" alt="Team P.A.W.S Logo" class="team-logo">
-                        <div class="logo-background"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Team P.A.W.S - Smart Pet Bowl System"
+        />
+        <meta
+            name="twitter:description"
+            content="Complete IoT pet hydration monitoring system with mobile app, ESP32-powered smart bowl, and AI vision technology."
+        />
+        <meta name="twitter:image" content="assets/logo.png" />
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Follow Our Engineering Journey</h2>
-                <p>Stay updated on our Smart Pet Bowl development progress</p>
-                <form class="email-signup">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit">Get Notified</button>
-                </form>
-                <p class="privacy-note">Academic project updates and development progress only.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                                    <div class="footer-logo">
-                    <img src="assets/logo.png" alt="Team P.A.W.S Logo" class="footer-logo-image">
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img
+                        src="assets/logo.png"
+                        alt="Team P.A.W.S Logo"
+                        class="logo-image"
+                    />
                     <span>Smart Pet Bowl</span>
                 </div>
-                <p>Team P.A.W.S - SDSU College of Engineering Senior Design Project</p>
+                <div class="nav-menu">
+                    <a href="#system" class="nav-link">System</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="privacy.html" class="nav-link">Privacy</a>
+                    <button class="nav-cta">Get Notified</button>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>Product</h4>
-                        <a href="#features">Features</a>
-                        <a href="#about">About</a>
-                        <a href="#">Coming Soon</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Support</h4>
-                        <a href="#contact">Contact Us</a>
-                        <a href="#">Help Center</a>
-                        <a href="privacy.html">Privacy Policy</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Connect</h4>
-                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                    </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Team P.A.W.S - SDSU College of Engineering. Academic project.</p>
-            </div>
-        </div>
-    </footer>
+        </nav>
 
-    <script src="script.js"></script>
-</body>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>SDSU Senior Design Project</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Complete
+                        <span class="gradient-text">IoT Pet Hydration</span>
+                        Monitoring System
+                    </h1>
+                    <p class="hero-description">
+                        Revolutionary pet water intake tracking combining
+                        ESP32-powered smart hardware, AI vision technology, and
+                        a comprehensive mobile application. Monitor your pet's
+                        hydration in real-time with our complete hardware and
+                        software solution.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn-primary">
+                            <i class="fas fa-bell"></i>
+                            Get Updates
+                        </button>
+                        <a
+                            href="https://github.com/Pet-Analytics-Water-Surveillance"
+                            target="_blank"
+                            class="btn-secondary"
+                        >
+                            <i class="fab fa-github"></i>
+                            View Project
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">Mobile App</span>
+                            <span class="stat-label">iOS & Android</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">ESP32</span>
+                            <span class="stat-label">Smart Hardware</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">AI Vision</span>
+                            <span class="stat-label">Pet Recognition</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="project-showcase">
+                        <div class="screenshot-container">
+                            <img
+                                src="assets/screenshot.jpg"
+                                alt="Smart Pet Bowl Mobile App Screenshot"
+                                class="project-screenshot"
+                            />
+                            <div class="screenshot-overlay">
+                                <div class="tech-badge">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>React Native App</span>
+                                </div>
+                                <div class="tech-badge">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>ESP32-S3 Hardware</span>
+                                </div>
+                                <div class="tech-badge">
+                                    <i class="fas fa-brain"></i>
+                                    <span>YOLOv5 AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Overview Section -->
+        <section id="system" class="system-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete Hardware & Software Solution</h2>
+                    <p>
+                        Three integrated components working together for
+                        comprehensive pet hydration monitoring
+                    </p>
+                </div>
+                <div class="system-grid">
+                    <div class="system-card">
+                        <div class="system-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Application</h3>
+                        <p class="system-platform">
+                            iOS & Android (React Native + Expo)
+                        </p>
+                        <ul class="system-features">
+                            <li>
+                                <i class="fas fa-check"></i> Real-time hydration
+                                tracking dashboard
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Multi-pet
+                                management with individual profiles
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Interactive
+                                analytics and charts
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Push notifications
+                                for alerts
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Bluetooth device
+                                setup and pairing
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Google Sign-In
+                                authentication
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Cloud sync via
+                                Supabase backend
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Expo</span>
+                            <span class="tech-tag">Supabase</span>
+                        </div>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Smart Bowl Hardware</h3>
+                        <p class="system-platform">
+                            ESP32-S3 Microcontroller with Custom PCB
+                        </p>
+                        <ul class="system-features">
+                            <li>
+                                <i class="fas fa-check"></i> ESP32-S3 dual-core
+                                processor
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Grove AI Vision V2
+                                camera (YOLOv5)
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> RD-03 24GHz radar
+                                motion sensor
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Ultrasonic water
+                                level sensor
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> WiFi + Bluetooth
+                                connectivity
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Custom PCB design
+                                under $100
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Water pump with
+                                relay control
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">ESP32-S3</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">FreeRTOS</span>
+                            <span class="tech-tag">BLE</span>
+                        </div>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Firmware & AI</h3>
+                        <p class="system-platform">
+                            Embedded Software with Machine Learning
+                        </p>
+                        <ul class="system-features">
+                            <li>
+                                <i class="fas fa-check"></i> YOLOv5 pet
+                                detection on-device
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Feature matching
+                                for pet identification
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Real-time sensor
+                                data processing
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> State machine for
+                                event tracking
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> BLE provisioning
+                                system
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Cloud
+                                synchronization via REST API
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Multi-tasking with
+                                FreeRTOS
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">YOLOv5</span>
+                            <span class="tech-tag">UART</span>
+                            <span class="tech-tag">I2C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How the System Works</h2>
+                    <p>
+                        Seamless integration between hardware, firmware, and
+                        mobile app
+                    </p>
+                </div>
+                <div class="workflow">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Motion Detection</h3>
+                            <p>
+                                RD-03 radar sensor detects pet approaching the
+                                bowl and triggers the AI camera
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>AI Recognition</h3>
+                            <p>
+                                YOLOv5 model identifies the pet and feature
+                                matching determines which specific pet it is
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Water Measurement</h3>
+                            <p>
+                                Ultrasonic sensor measures water level before
+                                and after drinking to calculate consumption
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Cloud Sync</h3>
+                            <p>
+                                ESP32 uploads drinking event to Supabase cloud
+                                database via WiFi
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Mobile App Update</h3>
+                            <p>
+                                Real-time data appears instantly in the mobile
+                                app with analytics and notifications
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Advanced Engineering Features</h2>
+                    <p>Cutting-edge technology from Team P.A.W.S at SDSU</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Cross-Platform Mobile App</h3>
+                        <p>
+                            Native iOS and Android app built with React Native
+                            and Expo. Features Google Sign-In, real-time
+                            updates, Bluetooth device pairing, and beautiful
+                            UI/UX.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Vision Recognition</h3>
+                        <p>
+                            YOLOv5 object detection running on Grove AI Vision
+                            V2 module automatically identifies pets with 60%+
+                            confidence threshold and feature matching.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>ESP32-S3 Microcontroller</h3>
+                        <p>
+                            Powerful dual-core ESP32-S3 with PSRAM processes
+                            sensor data, manages WiFi/BLE communication, and
+                            coordinates all system components with FreeRTOS.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-time Analytics</h3>
+                        <p>
+                            Mobile app displays interactive charts,
+                            daily/weekly/monthly statistics, trend analysis, and
+                            pet comparison metrics with data export
+                            functionality.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Cloud Integration</h3>
+                        <p>
+                            Supabase backend provides real-time synchronization,
+                            PostgreSQL database, REST API, authentication, and
+                            secure data storage for all devices.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bluetooth"></i>
+                        </div>
+                        <h3>BLE Provisioning</h3>
+                        <p>
+                            Easy device setup via Bluetooth Low Energy from
+                            mobile app. Configure WiFi credentials, link to user
+                            account, and sync pet profiles wirelessly.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Precise Water Tracking</h3>
+                        <p>
+                            Ultrasonic sensor measures water level with
+                            milliliter accuracy. Calculates consumption based on
+                            tank geometry and provides low water alerts.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Smart Notifications</h3>
+                        <p>
+                            Push notifications for low water levels, device
+                            offline alerts, hydration goal reminders, and
+                            customizable alert preferences in the mobile app.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Multi-Pet Support</h3>
+                        <p>
+                            Track up to 10 pets simultaneously with individual
+                            profiles, hydration goals, reference images, and
+                            personalized analytics for each pet.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Authentication</h3>
+                        <p>
+                            Google Sign-In integration with OAuth 2.0, encrypted
+                            credential storage, HTTPS/TLS communication, and
+                            privacy-focused data handling.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Custom PCB Design</h3>
+                        <p>
+                            Professional PCB integrates ESP32, sensors, power
+                            management, and peripherals efficiently while
+                            maintaining sub-$100 cost target.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Open Source</h3>
+                        <p>
+                            Complete source code available on GitHub including
+                            mobile app (TypeScript/React Native), firmware
+                            (C++/Arduino), and hardware schematics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="tech-stack-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technology Stack</h2>
+                    <p>
+                        Modern technologies powering our complete IoT solution
+                    </p>
+                </div>
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3><i class="fas fa-mobile-alt"></i> Mobile App</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">React Native</span>
+                            <span class="tech-item">Expo</span>
+                            <span class="tech-item">TypeScript</span>
+                            <span class="tech-item">React Navigation</span>
+                            <span class="tech-item">Zustand</span>
+                            <span class="tech-item">React Native BLE PLX</span>
+                            <span class="tech-item">Expo Notifications</span>
+                            <span class="tech-item"
+                                >React Native Chart Kit</span
+                            >
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-microchip"></i> Hardware</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">ESP32-S3</span>
+                            <span class="tech-item">Grove AI Vision V2</span>
+                            <span class="tech-item">RD-03 Radar Sensor</span>
+                            <span class="tech-item">HC-SR04 Ultrasonic</span>
+                            <span class="tech-item">Custom PCB</span>
+                            <span class="tech-item">5V Relay Module</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-code"></i> Firmware</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Arduino C++</span>
+                            <span class="tech-item">FreeRTOS</span>
+                            <span class="tech-item">YOLOv5</span>
+                            <span class="tech-item">NimBLE</span>
+                            <span class="tech-item">ArduinoJson</span>
+                            <span class="tech-item">HTTPClient</span>
+                            <span class="tech-item">LittleFS</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-cloud"></i> Backend & Cloud</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Supabase</span>
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">REST API</span>
+                            <span class="tech-item"
+                                >Real-time Subscriptions</span
+                            >
+                            <span class="tech-item">Supabase Auth</span>
+                            <span class="tech-item">Google OAuth 2.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Team P.A.W.S</h2>
+                        <p>
+                            <strong>Team P.A.W.S</strong> (Pet Analytics Water
+                            Surveillance) is an interdisciplinary engineering
+                            team at San Diego State University's College of
+                            Engineering. This project represents our Senior
+                            Design capstone for the EE/COMPE 491W course,
+                            sponsored by Dr. Hidenori Yamada.
+                        </p>
+                        <p>
+                            Our team combines
+                            <strong>Computer Engineering</strong> expertise (Tri
+                            Bui, Abdulmohsen Almunayes) with
+                            <strong>Electrical Engineering</strong> knowledge
+                            (Ehren Abeto, Brandon Lord, Zachary Xavier
+                            Encarnacion) to create this comprehensive IoT pet
+                            health monitoring solution.
+                        </p>
+                        <h3>Project Scope</h3>
+                        <p>
+                            This is a complete end-to-end system demonstrating
+                            expertise in:
+                        </p>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span
+                                    ><strong>Mobile Development:</strong>
+                                    Cross-platform iOS/Android app with React
+                                    Native</span
+                                >
+                            </div>
+                            <div class="about-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span
+                                    ><strong>Embedded Systems:</strong> ESP32-S3
+                                    firmware with FreeRTOS multi-tasking</span
+                                >
+                            </div>
+                            <div class="about-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span
+                                    ><strong>Machine Learning:</strong> YOLOv5
+                                    AI model for pet detection and
+                                    identification</span
+                                >
+                            </div>
+                            <div class="about-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span
+                                    ><strong>Hardware Design:</strong> Custom
+                                    PCB integrating sensors and
+                                    microcontroller</span
+                                >
+                            </div>
+                            <div class="about-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span
+                                    ><strong>Cloud Architecture:</strong>
+                                    Supabase backend with real-time
+                                    synchronization</span
+                                >
+                            </div>
+                            <div class="about-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span
+                                    ><strong>IoT Integration:</strong> WiFi,
+                                    Bluetooth, UART, I2C communication
+                                    protocols</span
+                                >
+                            </div>
+                        </div>
+                        <h3>Authentication & Privacy</h3>
+                        <p>
+                            Our mobile application uses
+                            <strong>Google Sign-In</strong> for secure user
+                            authentication. We collect only essential data
+                            needed for pet hydration monitoring: user profile
+                            information, pet profiles, and drinking event data.
+                            All data is encrypted in transit and at rest. We do
+                            not share user data with third parties. See our
+                            <a href="privacy.html">Privacy Policy</a> for
+                            complete details.
+                        </p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="team-logo-container">
+                            <img
+                                src="assets/logo.png"
+                                alt="Team P.A.W.S Logo"
+                                class="team-logo"
+                            />
+                            <div class="logo-background"></div>
+                        </div>
+                        <div class="project-stats">
+                            <div class="project-stat">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Major Components</div>
+                                <div class="stat-desc">
+                                    Mobile App, Hardware, Firmware
+                                </div>
+                            </div>
+                            <div class="project-stat">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Team Members</div>
+                                <div class="stat-desc">CE & EE Students</div>
+                            </div>
+                            <div class="project-stat">
+                                <div class="stat-value">$100</div>
+                                <div class="stat-label">Cost Target</div>
+                                <div class="stat-desc">
+                                    Affordable IoT Solution
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Follow Our Engineering Journey</h2>
+                    <p>
+                        Stay updated on our Smart Pet Bowl development progress
+                        and launch
+                    </p>
+                    <form class="email-signup">
+                        <input
+                            type="email"
+                            placeholder="Enter your email address"
+                            required
+                        />
+                        <button type="submit">Get Notified</button>
+                    </form>
+                    <p class="privacy-note">
+                        Academic project updates only. We respect your privacy.
+                        <a href="privacy.html">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img
+                                src="assets/logo.png"
+                                alt="Team P.A.W.S Logo"
+                                class="footer-logo-image"
+                            />
+                            <span>Smart Pet Bowl</span>
+                        </div>
+                        <p>
+                            Team P.A.W.S - SDSU College of Engineering Senior
+                            Design Project
+                        </p>
+                        <p class="footer-description">
+                            Complete IoT pet hydration monitoring system with
+                            mobile app (iOS/Android), ESP32-powered smart
+                            hardware, and AI vision technology.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4>Product</h4>
+                            <a href="#system">System Overview</a>
+                            <a href="#features">Features</a>
+                            <a href="#about">About</a>
+                            <a
+                                href="https://github.com/Pet-Analytics-Water-Surveillance"
+                                target="_blank"
+                                >GitHub</a
+                            >
+                        </div>
+                        <div class="footer-section">
+                            <h4>Legal</h4>
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="privacy.html#terms">Terms of Service</a>
+                            <a href="privacy.html#data-usage">Data Usage</a>
+                            <a href="#contact">Contact Us</a>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Technology</h4>
+                            <a href="#system">Mobile App</a>
+                            <a href="#system">Hardware</a>
+                            <a href="#system">Firmware</a>
+                            <a href="#features">Cloud Backend</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2024 Team P.A.W.S - SDSU College of Engineering.
+                        Academic Senior Design Project.
+                    </p>
+                    <p class="footer-tech">
+                        Built with React Native, ESP32-S3, YOLOv5, and Supabase
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
